@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Dimensions } from "react-native";
 import { Text, View, SafeAreaView, ImageBackground } from "react-native";
 import Carousel from "react-native-snap-carousel";
 
@@ -34,9 +35,10 @@ export default function Tutorial({ navigation }) {
       <View
         style={{
           borderRadius: 10,
-          height: 200,
+          height: 250,
           marginLeft: 25,
           marginRight: 25,
+          justifyContent: "center",
         }}
       >
         <ImageBackground
@@ -68,12 +70,21 @@ export default function Tutorial({ navigation }) {
           resizeMode="contain"
         />
         <S.TextBold>Você conhece o projeto?</S.TextBold>
-        <View style={{ flexDirection: "row", justifyContent: "center" }}>
+        <View
+          style={{
+            height: 200,
+            width: "100%",
+            alignItems: "center",
+          }}
+        >
           <Carousel
             layout={"default"}
+            contentContainerCustomStyle={{
+              alignSelf: "center",
+            }}
             data={carouselItems}
-            sliderWidth={300}
-            itemWidth={300}
+            sliderWidth={Dimensions.get("window").width}
+            itemWidth={250}
             renderItem={_renderItem}
             onSnapToItem={(index) => setActiveIndex(index)}
           />
