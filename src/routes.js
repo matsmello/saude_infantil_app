@@ -10,6 +10,7 @@ import Main from "@pages/Main";
 import Tutorial from "@pages/Tutorial";
 import Dashboard from "@pages/Dashboard";
 import FunSpace from "@pages/FunSpace";
+import MedicalRecord from "@pages/MedicalRecord";
 
 import TabBar from "@components/TabBar";
 const { Screen, Navigator } = createMaterialTopTabNavigator();
@@ -26,11 +27,12 @@ function Routes() {
         screenOptions={{
           headerShown: false,
         }}
-        initialRouteName={"FunSpace"}
+        initialRouteName={"MedicalRecord"}
       >
         <Stack.Screen name="Main" component={Main} />
         <Stack.Screen name="Tutorial" component={Tutorial} />
         <Stack.Screen name="Dashboard" component={Dashboard} />
+        <Stack.Screen name="MedicalRecord" component={MedicalRecord} />
         <Stack.Screen name="FunSpace" component={FunSpace} />
       </Stack.Navigator>
       {/* <Navigator
