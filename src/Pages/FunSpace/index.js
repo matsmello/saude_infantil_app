@@ -11,6 +11,7 @@ export default function Home({ navigation }) {
         <S.ContainerPure
           style={{
             width: Dimensions.get("window").width,
+            justifyContent: "center",
           }}
         >
           <S.Emotions
