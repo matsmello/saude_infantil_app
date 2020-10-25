@@ -37,6 +37,17 @@ function Routes() {
         <Stack.Screen name="Dashboard" component={Dashboard} />
         <Stack.Screen
           options={{
+            headerStyle: {
+              backgroundColor: "white",
+              borderWidth: 0,
+              borderColor: "white",
+              shadowColor: "transparent",
+              shadowRadius: 0,
+              shadowOffset: {
+                height: 0,
+              },
+              elevation: 0,
+            },
             headerBackImage: ({ goBack }) => (
               <TouchableOpacity
                 onPress={() => goBack}
@@ -56,6 +67,17 @@ function Routes() {
           name="MedicalRecordList"
           component={MedicalRecordList}
           options={{
+            headerStyle: {
+              backgroundColor: "white",
+              borderWidth: 0,
+              borderColor: "white",
+              shadowColor: "transparent",
+              shadowRadius: 0,
+              shadowOffset: {
+                height: 0,
+              },
+              elevation: 0,
+            },
             headerBackImage: ({ goBack }) => (
               <TouchableOpacity
                 onPress={() => goBack}
@@ -71,6 +93,17 @@ function Routes() {
         />
         <Stack.Screen
           options={{
+            headerStyle: {
+              backgroundColor: "white",
+              borderWidth: 0,
+              borderColor: "white",
+              shadowColor: "transparent",
+              shadowRadius: 0,
+              shadowOffset: {
+                height: 0,
+              },
+              elevation: 0,
+            },
             headerBackImage: ({ goBack }) => (
               <TouchableOpacity
                 onPress={() => goBack}
