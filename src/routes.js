@@ -11,10 +11,13 @@ import Tutorial from "@pages/Tutorial";
 import Dashboard from "@pages/Dashboard";
 import FunSpace from "@pages/FunSpace";
 import MedicalRecord from "@pages/MedicalRecord";
+import MedicalRecordList from "@pages/MedicalRecordList";
 
 import TabBar from "@components/TabBar";
 const { Screen, Navigator } = createMaterialTopTabNavigator();
 import { createStackNavigator } from "@react-navigation/stack";
+import { Image } from "react-native";
+import { TouchableOpacity } from "react-native";
 
 const Stack = createStackNavigator();
 
@@ -27,13 +30,62 @@ function Routes() {
         screenOptions={{
           headerShown: false,
         }}
-        initialRouteName={"MedicalRecord"}
+        initialRouteName={"Main"}
       >
         <Stack.Screen name="Main" component={Main} />
         <Stack.Screen name="Tutorial" component={Tutorial} />
         <Stack.Screen name="Dashboard" component={Dashboard} />
-        <Stack.Screen name="MedicalRecord" component={MedicalRecord} />
-        <Stack.Screen name="FunSpace" component={FunSpace} />
+        <Stack.Screen
+          options={{
+            headerBackImage: ({ goBack }) => (
+              <TouchableOpacity
+                onPress={() => goBack}
+                style={{ marginLeft: 20 }}
+              >
+                <Image source={require("./assets/back.png")} />
+              </TouchableOpacity>
+            ),
+            headerShown: true,
+            headerBackTitleVisible: false,
+            title: false,
+          }}
+          name="MedicalRecord"
+          component={MedicalRecord}
+        />
+        <Stack.Screen
+          name="MedicalRecordList"
+          component={MedicalRecordList}
+          options={{
+            headerBackImage: ({ goBack }) => (
+              <TouchableOpacity
+                onPress={() => goBack}
+                style={{ marginLeft: 20 }}
+              >
+                <Image source={require("./assets/back.png")} />
+              </TouchableOpacity>
+            ),
+            headerShown: true,
+            headerBackTitleVisible: false,
+            title: false,
+          }}
+        />
+        <Stack.Screen
+          options={{
+            headerBackImage: ({ goBack }) => (
+              <TouchableOpacity
+                onPress={() => goBack}
+                style={{ marginLeft: 20 }}
+              >
+                <Image source={require("./assets/back.png")} />
+              </TouchableOpacity>
+            ),
+            headerShown: true,
+            headerBackTitleVisible: false,
+            title: false,
+          }}
+          name="FunSpace"
+          component={FunSpace}
+        />
       </Stack.Navigator>
       {/* <Navigator
         tabBarPosition="bottom"

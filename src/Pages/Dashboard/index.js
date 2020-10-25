@@ -57,17 +57,19 @@ export default function Home({ navigation }) {
             ></S.ButtonImage>
           </S.Clickable>
 
-          <S.Text
-            style={{
-              textAlign: "center",
-              fontSize: 20,
-              fontWeight: "500",
-              marginTop: 20,
-            }}
-          >
-            Mais dicas no Espaço Diversão!
-          </S.Text>
-          <S.HelperBox>
+          <S.Clickable onPress={() => navigation.navigate("FunSpace")}>
+            <S.Text
+              style={{
+                textAlign: "center",
+                fontSize: 20,
+                fontWeight: "500",
+                marginTop: 20,
+              }}
+            >
+              Mais dicas no Espaço Diversão!
+            </S.Text>
+          </S.Clickable>
+          <S.HelperBox onPress={() => navigation.navigate("MedicalRecordList")}>
             <S.Text
               style={{
                 textAlign: "center",

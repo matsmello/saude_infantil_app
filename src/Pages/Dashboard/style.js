@@ -63,7 +63,6 @@ export const Input = styled.TextInput`
   padding: 30px;
   font-size: 19px;
   margin: 30px 20px;
-  max-height: 100px;
 `;
 
 export const ButtonImage = styled.Image``;

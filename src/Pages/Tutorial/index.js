@@ -78,8 +78,22 @@ export default function Tutorial({ navigation }) {
             onSnapToItem={(index) => setActiveIndex(index)}
           />
         </View>
-
-        <S.Text>Temos a missão de ajudar...</S.Text>
+        {activeIndex >= carouselItems.length - 2 ? (
+          <S.Button onPress={() => navigation.navigate("Dashboard")}>
+            <S.Text
+              style={{
+                color: "white",
+                textAlign: "center",
+                fontSize: 20,
+                fontWeight: "500",
+              }}
+            >
+              Entrar
+            </S.Text>
+          </S.Button>
+        ) : (
+          <S.Text>Temos a missão de ajudar...</S.Text>
+        )}
       </View>
       <S.BottomImage
         source={require("./../../assets/rain_colors.png")}
