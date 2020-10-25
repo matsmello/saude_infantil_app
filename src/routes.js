@@ -8,6 +8,7 @@ import Icon from "@expo/vector-icons/Entypo";
 
 import Main from "@pages/Main";
 import Tutorial from "@pages/Tutorial";
+import Dashboard from "@pages/Dashboard";
 
 import TabBar from "@components/TabBar";
 const { Screen, Navigator } = createMaterialTopTabNavigator();
@@ -24,9 +25,11 @@ function Routes() {
         screenOptions={{
           headerShown: false,
         }}
+        initialRouteName={"Dashboard"}
       >
         <Stack.Screen name="Main" component={Main} />
         <Stack.Screen name="Tutorial" component={Tutorial} />
+        <Stack.Screen name="Dashboard" component={Dashboard} />
       </Stack.Navigator>
       {/* <Navigator
         tabBarPosition="bottom"
