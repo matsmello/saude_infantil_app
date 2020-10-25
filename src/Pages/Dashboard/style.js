@@ -1,9 +1,15 @@
 import styled from "styled-components/native";
 
-export const Container = styled.View`
+export const Container = styled.SafeAreaView`
   flex: 1;
-  justify-content: center;
+  background-color: ${({ theme }) => "white"};
+`;
+
+export const ContainerPure = styled.View`
+  flex: 1;
   padding: 0 20px;
+  align-items: center;
+  margin: 40px 0px;
   background-color: ${({ theme }) => "white"};
 `;
 
@@ -37,23 +43,6 @@ export const Text = styled.Text`
   font-size: 19px;
   text-align: center;
   color: ${({ theme }) => "black"};
-`;
-
-export const TopImage = styled.Image`
-  width: 100%;
-  height: 200px;
-  position: absolute;
-  top: -40px;
-  z-index: 1;
-`;
-
-export const BottomImage = styled.Image`
-  width: 100%;
-  height: 200px;
-  position: absolute;
-  bottom: -40px;
-  z-index: 1;
-  transform: rotate(180deg);
 `;
 
 export const Input = styled.TextInput`

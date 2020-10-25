@@ -4,7 +4,17 @@ export const Container = styled.View`
   flex: 1;
   justify-content: center;
   align-items: center;
-  padding: 0 20px;
+  padding: 0px 20px;
+
+  background-color: ${({ theme }) => "white"};
+`;
+
+export const ContainerPure = styled.View`
+  flex: 1;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 100%;
+  padding: 90px 0px;
 
   background-color: ${({ theme }) => "white"};
 `;
@@ -26,7 +36,7 @@ export const TopImage = styled.Image`
   width: 100%;
   height: 200px;
   position: absolute;
-  top: -40px;
+  top: -60px;
   z-index: -1;
 `;
 
@@ -34,7 +44,7 @@ export const BottomImage = styled.Image`
   width: 100%;
   height: 200px;
   position: absolute;
-  bottom: -40px;
+  bottom: -60px;
   z-index: -1;
   transform: rotate(180deg);
 `;

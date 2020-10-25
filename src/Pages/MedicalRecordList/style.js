@@ -2,7 +2,6 @@ import styled from "styled-components/native";
 
 export const Container = styled.SafeAreaView`
   flex: 1;
-  padding: 0 20px;
   background-color: ${({ theme }) => "white"};
 `;
 
@@ -10,6 +9,7 @@ export const ContainerPure = styled.View`
   flex: 1;
   padding: 0 20px;
   align-items: center;
+  margin: 40px 0px;
   background-color: ${({ theme }) => "white"};
 `;
 

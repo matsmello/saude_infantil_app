@@ -10,15 +10,10 @@ import { Dimensions } from "react-native";
 export default function Home({ navigation }) {
   return (
     <S.Container>
-      <S.TopImage
-        source={require("./../../assets/rain_colors.png")}
-        resizeMode="contain"
-      />
-      <ScrollView>
-        <S.Container
+      <ScrollView showsVerticalScrollIndicator={false}>
+        <S.ContainerPure
           style={{
-            height: Dimensions.get("window").height,
-            alignItems: "center",
+            width: Dimensions.get("window").width,
           }}
         >
           <S.TextBold>Olá, paciente!</S.TextBold>
@@ -88,12 +83,8 @@ export default function Home({ navigation }) {
               Cliquem aqui
             </S.Text>
           </S.HelperBox>
-        </S.Container>
+        </S.ContainerPure>
       </ScrollView>
-      <S.BottomImage
-        source={require("./../../assets/rain_colors.png")}
-        resizeMode="contain"
-      />
     </S.Container>
   );
 }

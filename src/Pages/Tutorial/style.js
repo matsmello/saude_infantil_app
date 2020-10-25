@@ -4,16 +4,17 @@ export const Container = styled.View`
   flex: 1;
   justify-content: space-evenly;
   align-items: center;
-  padding: 80px 20px;
+  padding: 80px 0px;
 
   background-color: ${({ theme }) => "white"};
 `;
 
 export const TextBold = styled.Text`
   font-size: 30px;
-  margin: 20px 0px;
+  margin: 20px 20px;
   color: ${({ theme }) => "black"};
   font-weight: bold;
+  text-align: center;
 `;
 
 export const Text = styled.Text`
@@ -26,7 +27,7 @@ export const TopImage = styled.Image`
   width: 100%;
   height: 200px;
   position: absolute;
-  top: -40px;
+  top: -60px;
   z-index: -1;
 `;
 
@@ -34,7 +35,7 @@ export const BottomImage = styled.Image`
   width: 100%;
   height: 200px;
   position: absolute;
-  bottom: -40px;
+  bottom: -60px;
   z-index: -1;
   transform: rotate(180deg);
 `;
@@ -52,6 +53,7 @@ export const Input = styled.TextInput`
 export const Logo = styled.Image`
   width: 100%;
   height: 100px;
+  margin: 20px 20px;
 `;
 
 export const Button = styled.TouchableOpacity`

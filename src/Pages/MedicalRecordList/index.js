@@ -7,7 +7,7 @@ import { ScrollView, Dimensions, View } from "react-native";
 export default function Home({ navigation }) {
   return (
     <S.Container>
-      <ScrollView>
+      <ScrollView showsVerticalScrollIndicator={false}>
         <S.ContainerPure
           style={{
             width: Dimensions.get("window").width,

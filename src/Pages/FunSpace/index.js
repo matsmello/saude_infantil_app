@@ -4,10 +4,10 @@ import * as S from "./style";
 import { Divider } from "react-native-paper";
 import { ScrollView, Dimensions, View } from "react-native";
 
-export default function Home({ navigation }) {
+export default function FunSpace({ navigation }) {
   return (
     <S.Container>
-      <ScrollView>
+      <ScrollView showsVerticalScrollIndicator={false}>
         <S.ContainerPure
           style={{
             width: Dimensions.get("window").width,
