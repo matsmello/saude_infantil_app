@@ -2,7 +2,7 @@ import * as React from "react";
 
 import * as S from "./style";
 
-export default function Home() {
+export default function Home({ navigation }) {
   return (
     <S.Container>
       <S.TopImage
@@ -20,7 +20,7 @@ export default function Home() {
 
       <S.Input placeholder="Insira o seu SUS" placeholderTextColor="black" />
 
-      <S.Button>
+      <S.Button onPress={() => navigation.navigate("Tutorial")}>
         <S.Text
           style={{
             color: "white",

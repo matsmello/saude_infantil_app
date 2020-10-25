@@ -7,6 +7,7 @@ import { ThemeContext } from "styled-components";
 import Icon from "@expo/vector-icons/Entypo";
 
 import Main from "@pages/Main";
+import Tutorial from "@pages/Tutorial";
 
 import TabBar from "@components/TabBar";
 const { Screen, Navigator } = createMaterialTopTabNavigator();
@@ -25,6 +26,7 @@ function Routes() {
         }}
       >
         <Stack.Screen name="Main" component={Main} />
+        <Stack.Screen name="Tutorial" component={Tutorial} />
       </Stack.Navigator>
       {/* <Navigator
         tabBarPosition="bottom"
