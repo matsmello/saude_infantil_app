@@ -12,6 +12,7 @@ import Dashboard from "@pages/Dashboard";
 import FunSpace from "@pages/FunSpace";
 import MedicalRecord from "@pages/MedicalRecord";
 import MedicalRecordList from "@pages/MedicalRecordList";
+import Symptoms from "@pages/Symptoms";
 
 import TabBar from "@components/TabBar";
 const { Screen, Navigator } = createMaterialTopTabNavigator();
@@ -65,6 +66,34 @@ function Routes() {
         />
         <Stack.Screen
           name="MedicalRecordList"
+          component={MedicalRecordList}
+          options={{
+            headerStyle: {
+              backgroundColor: "white",
+              borderWidth: 0,
+              borderColor: "white",
+              shadowColor: "transparent",
+              shadowRadius: 0,
+              shadowOffset: {
+                height: 0,
+              },
+              elevation: 0,
+            },
+            headerBackImage: ({ goBack }) => (
+              <TouchableOpacity
+                onPress={() => goBack}
+                style={{ marginLeft: 20 }}
+              >
+                <Image source={require("./assets/back.png")} />
+              </TouchableOpacity>
+            ),
+            headerShown: true,
+            headerBackTitleVisible: false,
+            title: false,
+          }}
+        />
+        <Stack.Screen
+          name="Symptoms"
           component={MedicalRecordList}
           options={{
             headerStyle: {

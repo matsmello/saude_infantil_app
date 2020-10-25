@@ -16,7 +16,7 @@ export default function Home({ navigation }) {
             width: Dimensions.get("window").width,
           }}
         >
-          <S.TextBold>Olá, paciente!</S.TextBold>
+          <S.TextBold>Olá, João!</S.TextBold>
 
           <View style={{ width: "100%", marginVertical: 25 }}>
             <Divider style={{ height: 10, backgroundColor: "#F99D07" }} />
@@ -39,6 +39,26 @@ export default function Home({ navigation }) {
               <S.Emote source={require("./../../assets/happy.png")}></S.Emote>
             </S.Clickable>
           </S.Horizontal>
+
+          <S.HelperBox onPress={() => navigation.navigate("Symptoms")}>
+            <S.Text
+              style={{
+                textAlign: "center",
+                fontSize: 20,
+                fontWeight: "500",
+              }}
+            >
+              E nos diga se você tem algum sintoma
+            </S.Text>
+            <S.Text
+              style={{
+                textAlign: "center",
+                fontSize: 20,
+              }}
+            >
+              Cliquem aqui
+            </S.Text>
+          </S.HelperBox>
 
           <S.Input
             placeholder="Quer nos contar um pouco mais? Digite aqui..."
