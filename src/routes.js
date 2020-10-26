@@ -31,7 +31,7 @@ function Routes() {
         screenOptions={{
           headerShown: false,
         }}
-        initialRouteName={"Symptoms"}
+        initialRouteName={"Main"}
       >
         <Stack.Screen name="Main" component={Main} />
         <Stack.Screen name="Tutorial" component={Tutorial} />

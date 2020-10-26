@@ -25,9 +25,15 @@ export default function Home({ navigation }) {
           <S.Text>Ficha 1</S.Text>
 
           <S.ContainerPure>
-            {[1, 2, 3, 1, 1].map((el) => (
+            {[
+              "Estágio",
+              "Período",
+              "Remédios",
+              "Precauções",
+              "Observações",
+            ].map((el) => (
               <S.Input
-                placeholder="Informação"
+                placeholder={el}
                 placeholderTextColor="black"
                 multiline
               />
@@ -37,9 +43,9 @@ export default function Home({ navigation }) {
           <S.Text>Médico responsável</S.Text>
 
           <S.ContainerPure>
-            {[1, 2].map((el) => (
+            {["Nome", "CRM", "Email"].map((el) => (
               <S.Input
-                placeholder="Informação"
+                placeholder={el}
                 placeholderTextColor="black"
                 multiline
               />

@@ -2,7 +2,7 @@ import * as React from "react";
 
 import * as S from "./style";
 import { Divider } from "react-native-paper";
-import { ScrollView, Dimensions, View } from "react-native";
+import { ScrollView, Dimensions, View, Image } from "react-native";
 
 export default function FunSpace({ navigation }) {
   return (
@@ -26,21 +26,20 @@ export default function FunSpace({ navigation }) {
           <S.Text>Músicas</S.Text>
 
           <S.Horizontal>
-            {[1, 2, 3, 4].map((el) => (
+            {[1, 2].map((el) => (
               <S.HelperBox
                 style={{
                   width: (Dimensions.get("window").width - 100) / 2,
                 }}
               >
-                <S.Text
+                <Image
+                  source={require("./../../assets/music.png")}
                   style={{
-                    textAlign: "center",
-                    fontSize: 20,
-                    fontWeight: "500",
+                    alignSelf: "center",
+                    width: 60,
                   }}
-                >
-                  Link
-                </S.Text>
+                  resizeMode="contain"
+                />
               </S.HelperBox>
             ))}
           </S.Horizontal>
@@ -48,19 +47,54 @@ export default function FunSpace({ navigation }) {
           <S.Text>Vídeos</S.Text>
 
           <S.Horizontal>
-            {[1, 2, 3, 4].map((el) => (
+            {[1, 2].map((el) => (
               <S.HelperBox
                 style={{ width: (Dimensions.get("window").width - 100) / 2 }}
               >
-                <S.Text
+                <Image
+                  source={require("./../../assets/play.png")}
                   style={{
-                    textAlign: "center",
-                    fontSize: 20,
-                    fontWeight: "500",
+                    alignSelf: "center",
+                    width: 60,
                   }}
-                >
-                  Link
-                </S.Text>
+                  resizeMode="contain"
+                />
+              </S.HelperBox>
+            ))}
+          </S.Horizontal>
+          <S.Text>Livros</S.Text>
+
+          <S.Horizontal>
+            {[1, 2].map((el) => (
+              <S.HelperBox
+                style={{ width: (Dimensions.get("window").width - 100) / 2 }}
+              >
+                <Image
+                  source={require("./../../assets/book.png")}
+                  style={{
+                    alignSelf: "center",
+                    width: 60,
+                  }}
+                  resizeMode="contain"
+                />
+              </S.HelperBox>
+            ))}
+          </S.Horizontal>
+          <S.Text>Jogos</S.Text>
+
+          <S.Horizontal>
+            {[1, 2].map((el) => (
+              <S.HelperBox
+                style={{ width: (Dimensions.get("window").width - 100) / 2 }}
+              >
+                <Image
+                  source={require("./../../assets/video.png")}
+                  style={{
+                    alignSelf: "center",
+                    width: 60,
+                  }}
+                  resizeMode="contain"
+                />
               </S.HelperBox>
             ))}
           </S.Horizontal>

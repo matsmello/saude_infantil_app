@@ -2,7 +2,7 @@ import * as React from "react";
 
 import * as S from "./style";
 import { Divider } from "react-native-paper";
-import { ScrollView, Dimensions, View } from "react-native";
+import { ScrollView, Dimensions, View, Image } from "react-native";
 
 export default function Home({ navigation }) {
   return (
@@ -22,22 +22,21 @@ export default function Home({ navigation }) {
           <S.Text>Fichas de Tratamento</S.Text>
 
           <S.ListHorizontal horizontal showsHorizontalScrollIndicator={false}>
-            {[1, 2, 3, 4].map((el) => (
+            {[1, 2, 3, 4].map((el, index) => (
               <S.HelperBox
                 style={{
                   width: (Dimensions.get("window").width - 100) / 2,
                 }}
                 onPress={() => navigation.navigate("MedicalRecord")}
               >
-                <S.Text
+                <Image
+                  source={require("./../../assets/book.png")}
                   style={{
-                    textAlign: "center",
-                    fontSize: 20,
-                    fontWeight: "500",
+                    alignSelf: "center",
+                    width: 60,
                   }}
-                >
-                  Link
-                </S.Text>
+                  resizeMode="contain"
+                />
               </S.HelperBox>
             ))}
           </S.ListHorizontal>
@@ -45,10 +44,14 @@ export default function Home({ navigation }) {
           <S.Text>Redes de Apoio</S.Text>
 
           <S.ListHorizontal horizontal showsHorizontalScrollIndicator={false}>
-            {[1, 2, 3, 4].map((el) => (
+            {["Acolher, Amparar e Apoiar", "ACCCOM"].map((el) => (
               <S.HelperBox
                 style={{
                   width: (Dimensions.get("window").width - 100) / 2,
+                  alignSelf: "center",
+                  alignContent: "center",
+                  alignItems: "center",
+                  justifyContent: "center",
                 }}
               >
                 <S.Text
@@ -58,7 +61,7 @@ export default function Home({ navigation }) {
                     fontWeight: "500",
                   }}
                 >
-                  Link
+                  {el}
                 </S.Text>
               </S.HelperBox>
             ))}
@@ -67,7 +70,7 @@ export default function Home({ navigation }) {
           <S.Text>Locais de Tratamento</S.Text>
 
           <S.ListHorizontal horizontal showsHorizontalScrollIndicator={false}>
-            {[1, 2, 3, 4].map((el) => (
+            {["Hospital SP", "Hospital Santa Casa"].map((el) => (
               <S.HelperBox
                 style={{
                   width: (Dimensions.get("window").width - 100) / 2,
@@ -80,7 +83,7 @@ export default function Home({ navigation }) {
                     fontWeight: "500",
                   }}
                 >
-                  Link
+                  {el}
                 </S.Text>
               </S.HelperBox>
             ))}
